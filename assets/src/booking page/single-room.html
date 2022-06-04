@@ -115,7 +115,7 @@
   <br><br><br><br>
   <!-- Content -->
   <div class="container">
-    <div class="row ">
+    <div class="row align-items-center">
       <!-- COL 1 -->
       <div class="col owl-carousel owl-theme room-carousel" id="owl-demo">
         <!-- item 1 -->
@@ -133,21 +133,63 @@
       </div>
       <!-- COL 2 -->
       <div class="col text-center">
-        dasdjdsj
+        <div class="content-room-cont">
+          <h1>Single Room</h1>
+          <p>Two beds for up to 4 people, cool swimming pool view</p>
+          <b>$150/ per night</b>
+        </div>
       </div>
     </div>
     <br><br>
-    <!-- DATE ROW -->
-    <div class="row row-cols-1 row-cols-md-2 date-row">
-      <div class="col">
-        <h1 class="text-center">From</h1>
-        <input type="date">
+    <!-- BOOK ROW -->
+    <h1 class="text-center" style="text-transform: uppercase;">Prepare for <span style="color: #ffc107;">booking</span>
+    </h1>
+  </div>
+  <br><br>
+  <div class="book-cont">
+    <form  class="book-form container">
+      <div style="margin-bottom: 1rem;" class="row justify-content-center row-cols-1 row-cols-md-4 g-4 book-top">
+        <div class="col  book-title border-right-book">
+          <h5>CHECK IN</h5>
+          <input type="date" name="check_in" id="checkIn">
+        </div>
+        <div class="col  book-title border-right-book">
+          <h5>CHECK OUT</h5>
+          <input type="date" name="check_out" id="checkOut">
+        </div>
+        <div class="col">
+          <div class="row row-cols-md-2 g-4">
+            <div class="col  book-title border-right-book">
+              <h5>Adults</h5>
+              <select name="adults" id="number_adults">
+                <option selected disabled>Choose</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+            <div class="col  book-title">
+              <h5>Children</h5>
+              <select name="children" id="number_children">
+                <option selected disabled>Choose</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col">
-        <h1 class="text-center">To</h1>
-        <input type="date">
+      <div class="row row-cols-1 row-cols-md-2 date-row">
+        <input type="text"  class="item-input"  name="username"  id="username" placeholder="Username">
+        <input type="text"  class="item-input" name="phone" id="phone"  placeholder="Phone">
+        <input type="email" class="item-input"   name="email" id="email"  placeholder="Email">
+        <button id="book-btn" type="button" class="book-btn">Submit</button>
       </div>
-    </div>
+    </form>
   </div>
   <br><br><br>
   <!-- Footer -->
@@ -239,6 +281,7 @@
   </footer>
   <!-- SCRIPT -->
   <script src="/assets/src/javascript/formBehave.js"></script>
+  <script src="/assets/src/javascript/bookbh.js"></script>
   <!-- SCRIPT WITH BOOSTRAPS -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
     integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"

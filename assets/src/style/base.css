@@ -219,17 +219,19 @@ img {
     color: var(--bs-primary-text);
 }
 
-.login-btn {
+.nav-btn {
     border: none;
     display: inline-flex;
     align-items: center;
     place-content: center;
     place-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
 }
 
 .login-btn .bi {
     font-size: 1.2rem;
-    margin-right: 5px;
     color: var(--bs-dark);
 }
 
