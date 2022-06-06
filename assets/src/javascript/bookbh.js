@@ -11,17 +11,6 @@ const accepted = document.querySelector('.accept-form');
 const denied = document.querySelector('.denied-form');
 
 booking.addEventListener('click', () => {
-  // let info = {
-  //   dataIn: checkIn.value,
-  //   dataOut: checkOut.value,
-  //   adults: adults.value,
-  //   children: children.value,
-  //   name: username.value,
-  //   phone: phone.value,
-  //   email: email.value,
-  // }
-  // console.log(info);
-
   checkEmpty(name, phone, email);
   // set text empty
   checkIn.value = "";
