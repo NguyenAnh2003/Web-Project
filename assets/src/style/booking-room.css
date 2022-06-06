@@ -45,7 +45,7 @@ input[type="date"] {
   background-color: #fff;
   border-radius: 4px;
   /* background-color: #ffc107; */
-  background: linear-gradient(115deg, #f8b500, #f8b500 ,#fcd87f );
+  background: linear-gradient(115deg, #f6304aaa, #f8b500 );
 }
 
 
