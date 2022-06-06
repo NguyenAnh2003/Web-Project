@@ -44,6 +44,8 @@ input[type="date"] {
   padding: 1rem 0;
   background-color: #fff;
   border-radius: 4px;
+  /* background-color: #ffc107; */
+  background: linear-gradient(115deg, #f8b500, #f8b500 ,#fcd87f );
 }
 
 
@@ -54,34 +56,3 @@ input[type="date"] {
   
 }
 
-/* elements input */
-input[type="date"] {
-  background-color: #212529;
-  /* background-color: #0080ff; */
-  padding: 8px;
-  color: #fff;
-  font-size: 13px;
-  border: none;
-  border-radius: 4px;
-  outline: none;
-}
-
-::-webkit-calendar-picker-indicator {
-  background-color: #fff;
-  padding: 5px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-select {
-  padding: 7px;
-  border-radius: 4px;
-  color: #fff;
-  background-color: #212529;
-}
-select {
-  -moz-appearance:none; 
-  -webkit-appearance:none; 
-  appearance:none;
-  /* padding: 5px; */
-}

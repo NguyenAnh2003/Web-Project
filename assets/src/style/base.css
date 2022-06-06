@@ -53,15 +53,14 @@
     --primary: #0d6efd;
     --box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
     /*Text Style*/
-    --primary-font: 'Poppins', sans-serif;
-    --secondary-font: 'Oswald', sans-serif;
+    --primary-font: "Poppins", sans-serif;
+    --secondary-font: "Oswald", sans-serif;
     --primary-text: #021832;
     --secondary-text: #caa169;
     --text-white: #fff;
     --text-black: #151515;
     --text-gray: #e4e4e4;
 }
-
 
 /* Scrollbar */
 
@@ -82,9 +81,7 @@
     background: #bb863d;
 }
 
-
 /*  */
-
 
 /* Responsive */
 
@@ -129,7 +126,6 @@ ul {
     padding: 0;
 }
 
-
 /* Navigation */
 
 .nav-item a {
@@ -145,20 +141,17 @@ ul {
     background-color: var(--bs-primary-text);
 }
 
-
 /* HEADER */
 
 .header {
     margin-top: 89px;
 }
 
-
 /* Main Cont */
 
 .main-cont {
     /* margin-top: 105px; */
 }
-
 
 /* Image */
 
@@ -169,7 +162,6 @@ img {
 .btn {
     background-color: var(--bs-primary-text);
 }
-
 
 /* Footer */
 
@@ -210,7 +202,6 @@ img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-
 
 /* ICON */
 
@@ -273,7 +264,6 @@ img {
     color: var(--bs-gray);
 }
 
-
 /* Carousel */
 
 #owl-demo .item {
@@ -285,7 +275,6 @@ img {
     width: 100%;
     height: auto;
 }
-
 
 /* header carousel */
 
@@ -304,17 +293,17 @@ img {
 }
 
 .item-1 {
-    background: linear-gradient(135deg, #48556380, #29323c4c), url('/assets/src/img/img-card2.jpg') no-repeat center;
+    background: linear-gradient(135deg, #48556380, #29323c4c), url("/assets/src/img/img-card2.jpg") no-repeat center;
     background-size: cover;
 }
 
 .item-2 {
-    background: linear-gradient(135deg, #48556380, #29323c42), url('/assets/src/img/head-home.jpg') no-repeat center;
+    background: linear-gradient(135deg, #48556380, #29323c42), url("/assets/src/img/head-home.jpg") no-repeat center;
     background-size: cover;
 }
 
 .item-3 {
-    background: linear-gradient(135deg, #48556380, #29323c46), url('/assets/src/img/img-header.jpg') no-repeat center;
+    background: linear-gradient(135deg, #48556380, #29323c46), url("/assets/src/img/img-header.jpg") no-repeat center;
     background-size: cover;
 }
 
@@ -335,14 +324,13 @@ img {
 }
 
 .header button:hover {
-    transition: .3s;
+    transition: 0.3s;
     background-color: #212529;
 }
 
-
 /*  */
 
-@media screen and (min-width:992px) {
+@media screen and (min-width: 992px) {
     #owl-demo-header .item {
         height: 560px;
     }
@@ -399,7 +387,7 @@ img {
     font-weight: 600;
 }
 
-@media screen and (max-width:340px) {
+@media screen and (max-width: 340px) {
     .contact-content .contact-sub {
         flex-direction: column;
         gap: 1rem;
@@ -411,9 +399,7 @@ img {
 .direct-newpage-cont {
     min-height: 300px;
     color: #fff;
-    background: 
-    linear-gradient(135deg, #48556380, #29323ca0),
-    url('/assets/src//img/counter-bg.jpg') no-repeat center; 
+    background: linear-gradient(135deg, #48556380, #29323ca0), url("/assets/src//img/counter-bg.jpg") no-repeat center;
     background-position: center;
     display: grid;
     place-content: center;
@@ -434,6 +420,67 @@ img {
     padding: 0.3rem 1rem;
 }
 .direct-newpage-cont button:hover {
-    transition: .3s;
+    transition: 0.3s;
     background-color: #212529;
+}
+
+/* elements input */
+input[type="date"] {
+    background-color: #212529;
+    padding: 8px;
+    color: #fff;
+    font-size: 13px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+}
+
+::-webkit-calendar-picker-indicator {
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+select {
+    padding: 7px;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #212529;
+}
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    /* padding: 5px; */
+}
+
+/* Element */
+input[type="text"], 
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+	/* height: 50px; */
+    margin: 0;
+    padding: 0 20px;
+    vertical-align: middle;
+    background: #fff;
+    border: 3px solid #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 50px;
+    color: #888;
+    -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+    -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+    -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
+}
+
+input[type="text"]:focus, 
+input[type="password"]:focus,
+input[type="email"] {
+	outline: 0;
+	background: #fff;
+    border: 3px solid #fff;
+    -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
 }

@@ -6,6 +6,9 @@ const username = document.getElementById('username');
 const phone = document.getElementById('phone');
 const email = document.getElementById('email');
 const booking = document.getElementById('book-btn');
+const progressBar = document.querySelector('.progress');
+const accepted = document.querySelector('.accept-form');
+const denied = document.querySelector('.denied-form');
 
 booking.addEventListener('click', () => {
   // let info = {
@@ -33,6 +36,29 @@ booking.addEventListener('click', () => {
 function checkEmpty(name, phone, email) {
   if(name.value == "" || phone.value == "" || email.value == "")
   {
-    alert("SHIT")
+    showDenied();
   }
+  else {
+    showAccpt();
+  }
+}
+
+// counting time close
+let time;
+
+// show accepted form
+function showAccpt() {
+  accepted.classList.add('active');
+
+  time = setTimeout(() => {
+    accepted.classList.remove('active');
+  }, 2000);
+} 
+// show denied form
+function showDenied() {
+  denied.classList.add('active');
+
+  time = setTimeout(() => {
+    denied.classList.remove('active');
+  }, 2000);
 }
