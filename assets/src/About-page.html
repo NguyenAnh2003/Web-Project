@@ -34,29 +34,34 @@
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="z-index: 10;">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="/assets/src/img/logo-hotel.png" class="img-fluid" width="80" alt="">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Room</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Experiences</a>
-          </li>
+  <div class="container nav-cont"  style="z-index: 20;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="/assets/src/img/logo-hotel.png" class="img-fluid" width="80" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Room</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Experiences</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Gallery</a>
+            </li>
+          </ul>
           <!-- Form -->
           <div class="">
             <button id="login-btn" data-modal-target="#modal_external" type="button" class="btn btn-warning btn-nav-bar login-btn">
@@ -64,10 +69,10 @@
               <b>Account</b>
             </button>
           </div>
-        </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
   <!-- login form -->
   <div class="modal_external" id="modal_external">
     <div class="modal-header">
@@ -352,6 +357,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link useful-links-item" aria-current="page" href="#">Experiences</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link useful-links-item" aria-current="page" href="#">Gallery</a>
             </li>
           </nav>
         </div>

@@ -113,9 +113,17 @@ body {
 }
 
 .navbar {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.nav-cont {
     position: fixed;
     top: 0;
-    width: 100%;
+    left: 50%;
+    transform: translate(-50%, .2rem);
 }
 
 ul li {
@@ -144,14 +152,17 @@ ul {
 /* HEADER */
 
 .header {
-    margin-top: 89px;
+    margin-top: -90px;
+}
+
+@media screen and (max-width:991.5px){
+    .header {
+        margin-top: 0px;
+        height: 400px;
+    }
 }
 
 /* Main Cont */
-
-.main-cont {
-    /* margin-top: 105px; */
-}
 
 /* Image */
 
@@ -283,9 +294,8 @@ img {
     width: 100%;
     min-height: 300px;
 }
-
 #owl-demo-header .item {
-    min-height: 260px;
+    min-height: 460px;
     display: grid;
     place-content: center;
     text-align: center;
