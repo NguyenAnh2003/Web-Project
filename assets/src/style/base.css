@@ -113,18 +113,12 @@ body {
 }
 
 .navbar {
-    width: 100%;
-    padding: 12px;
-    border-radius: 4px;
-    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.5);
-}
-
-.nav-cont {
     position: fixed;
     top: 0;
-    left: 50%;
-    transform: translatex(-50%);
+    width: 100%;
+    padding: 12px;
 }
+
 
 ul li {
     list-style: none;
@@ -152,7 +146,7 @@ ul {
 /* HEADER */
 
 .header {
-    margin-top: -90px;
+    margin-top: 89px;
 }
 
 @media screen and (max-width:991.5px){
