@@ -283,7 +283,7 @@
 /*------------timer------------*/
 
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:768.5px) {
   .wrapper2::after,
   .area .left::after,
   .timer.about::before,
@@ -303,7 +303,8 @@
 
   /*------------timer------------*/
   .timer.wrapper {
-    height: 50vh;
+    /* height: 50vh; */
+    display: none;
   }
 
   /*------------wrapper------------*/
