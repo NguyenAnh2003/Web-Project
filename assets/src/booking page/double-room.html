@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Frammework boostrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- FONT -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/src/style/base.css">
+  <link rel="stylesheet" href="/assets/src/style/form.css">
+  <link rel="stylesheet" href="/assets/src/style/booking-room.css">
+  <link rel="stylesheet" href="/assets/src/style/alert-form.css">
+  <!-- Favicon -->
+  <link rel="icon" href="http://lab.finalterm.online/img/logo-hotel.png" type="image/x-icon">
+  <!-- Carousel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Owl carousel theme -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+  <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+  <title>Double Room | Booking</title>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="z-index: 20;">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/src/img/logo-hotel.png" class="img-fluid" width="80" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Room</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Experiences</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Gallery</a>
+          </li>
+        </ul>
+        <!-- Form -->
+        <div class="">
+          <button id="login-btn" data-modal-target="#modal_external" type="button"
+            class="btn btn-warning btn-nav-bar login-btn">
+            <i class="bi bi-person-circle"></i>
+            <b>Account</b>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- login form -->
+  <div class="modal_external" id="modal_external">
+    <div class="modal-header">
+      <img src="/assets/src/img/logo-hotel.png" class="img-fluid" width="45" alt="">
+      <div class="title">Sign In</div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <form class="modal-body">
+      <input type="text" class="items" placeholder="Username">
+      <input type="password" class="items" placeholder="Password">
+      <button type="submit" class="signIn-btn btn-warning btn items">Sign in</button>
+    </form>
+    <div class="fg-sup-cont">
+      <a href="#" class="forgt-pssw-link">Forgot Password</a>
+      <a href="#" data-modal-target="#modal_external_signUp" class="signUp-link">Sign Up</a>
+    </div>
+  </div>
+  <!-- sign up form -->
+  <div class="modal_external_signUp" id="modal_external_signUp" style="z-index: 100;">
+    <div class="modal-header-signUp">
+      <img src="/assets/src/img/logo-hotel.png" class="img-fluid" width="45" alt="">
+      <div class="title">Sign Up</div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <form class="modal-body-signUp">
+      <input type="email" class="items" placeholder="Email">
+      <input type="text" class="items" placeholder="Phone Number">
+      <input type="text" class="items" placeholder="Username">
+      <input type="password" class="items" placeholder="Password">
+      <input type="password" class="items" placeholder="Confirm Password">
+      <button type="submit" class="signIn-btn btn-warning btn items">Sign up</button>
+    </form>
+    <div class="con-wth-social">
+      <a href="" class="with-fb item-cont">
+        <i class="bi bi-facebook"></i>
+        <p>Continues with facebook</p>
+      </a>
+      <a href="" class="with-ins item-cont">
+        <i class="bi bi-instagram"></i>
+        <p>Continues with instagram</p>
+      </a>
+    </div>
+  </div>
+  <!-- overlay when calling pop up -->
+  <div id="overlay"></div>
+  <!-- accepted form -->
+  <div class="alert-cont accept-form">
+    <div class="accpt-sub-cont d-flex align-items-center">
+      <i class="bi bi-check-circle-fill"></i>
+      <p>Sent successfully</p>
+    </div>
+  </div>
+  <div class="alert-cont denied-form">
+    <div class="accpt-sub-cont d-flex align-items-center">
+      <i class="bi bi-x-circle-fill"></i>
+      <p>You not fill some fields</p>
+    </div>
+  </div>
+  <br><br><br><br>
+  <!-- Content -->
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- COL 1 -->
+      <div class="col owl-carousel owl-theme room-carousel" id="owl-demo">
+        <!-- item 1 -->
+        <div class="item">
+          <img src="/assets/src/img/customer-banner.jpg" alt="">
+        </div>
+        <!-- item 2 -->
+        <div class="item">
+          <img src="/assets/src/img/card3.jpg" alt="">
+        </div>
+        <!-- item 3 -->
+        <div class="item">
+          <img src="/assets/src/img/room-content.jpg" alt="">
+        </div>
+      </div>
+      <!-- COL 2 -->
+      <div class="col text-center">
+        <div class="content-room-cont">
+          <h1>Single Room</h1>
+          <p>Two beds for up to 4 people, cool swimming pool view</p>
+          <b>$150/ per night</b>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <!-- BOOK ROW -->
+    <h1 class="text-center" style="text-transform: uppercase;">Prepare for <span style="color: #ffc107;">booking</span>
+    </h1>
+  </div>
+  <br><br>
+  <div class="book-cont">
+    <form  class="book-form container">
+      <div style="margin-bottom: 1rem;" class="row justify-content-center row-cols-1 row-cols-md-4 g-4 book-top">
+        <div class="col  book-title border-right-book">
+          <h5>CHECK IN</h5>
+          <input type="date" name="check_in" id="checkIn">
+        </div>
+        <div class="col  book-title border-right-book">
+          <h5>CHECK OUT</h5>
+          <input type="date" name="check_out" id="checkOut">
+        </div>
+        <div class="col">
+          <div class="row row-cols-md-2 g-4">
+            <div class="col  book-title border-right-book">
+              <h5>Adults</h5>
+              <select name="adults" id="number_adults">
+                <option selected disabled>Choose</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+            <div class="col  book-title">
+              <h5>Children</h5>
+              <select name="children" id="number_children">
+                <option selected disabled>Choose</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-2 date-row">
+        <input type="text"  class="item-input"  name="username"  id="username" placeholder="Username">
+        <input type="text"  class="item-input" name="phone" id="phone"  placeholder="Phone">
+        <input type="email" class="item-input"   name="email" id="email"  placeholder="Email">
+        <button id="book-btn" type="button" class="book-btn">Submit</button>
+      </div>
+    </form>
+  </div>
+  <br><br><br>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <a class="navbar-brand img-footer" href="#">
+          <img src="/assets/src/img/logo-hotel.png" class="img-fluid" width="80" alt="">
+        </a>
+      </div>
+      <div class="row  row-cols-sm-2 row-cols-md-4">
+        <div class="col first-footer">
+          <h3 class="tilte-footer blockquote-footer">join us</h3>
+          <p style="max-width: 198px;">Join with us and have your best holiday</p>
+          <!-- Payments Partners -->
+          <h3 class="tilte-footer blockquote-footer">Partners</h3>
+          <ul class="pm-pn-cont list-unstyled">
+            <li class="pm-pn-item">
+              <img src="/assets/src/img/payment-partner1.jpg" width="60" class="img-fluid" alt="pm-partner">
+            </li>
+            <li class="pm-pn-item">
+              <img src="/assets/src/img/pm-pn-2.jpg" width="60" class="img-fluid" alt="pm-partner">
+            </li>
+            <li class="pm-pn-item">
+              <img src="/assets/src/img/pm-pn-3.jpg" width="60" class="img-fluid" alt="pm-partner">
+            </li>
+            <li class="pm-pn-item">
+              <img src="/assets/src/img/pm-pn-4.jpg" width="60" class="img-fluid" alt="pm-partner">
+            </li>
+            <li class="pm-pn-item">
+              <img src="/assets/src/img/pm-pn-5.jpg" width="60" class="img-fluid" alt="pm-partner">
+            </li>
+            <li class="pm-pn-item">
+              <img src="/assets/src/img/pm-pn-6.jpg" width="60" class="img-fluid" alt="pm-partner">
+            </li>
+            <li class="pm-pn-item">
+              <img src="/assets/src/img/pm-pn-7.jpg" width="60" class="img-fluid" alt="pm-partner">
+            </li>
+            <li class="pm-pn-item">
+              <img src="/assets/src/img/pm-pn-8.jpg" width="60" class="img-fluid" alt="pm-partner">
+            </li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3 class="tilte-footer blockquote-footer">Download</h3>
+          <ul class="dl-cont list-unstyled">
+            <li class="dl-item">
+              <img src="/assets/src/img/dl-img-1.jpg" alt="download-img" width="150" class="img-fluid">
+            </li>
+            <li class="dl-item">
+              <img src="/assets/src/img/dl-img-2.jpg" alt="download-img" width="150" class="img-fluid">
+            </li>
+          </ul>
+        </div>
+        <div class="col">
+          <h3 class="tilte-footer blockquote-footer">useful links</h3>
+          <nav class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link  useful-links-item" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link useful-links-item" aria-current="page" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active useful-links-item active" aria-current="page" href="#">Room</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link useful-links-item" aria-current="page" href="#">Experiences</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Gallery</a>
+            </li>
+          </nav>
+        </div>
+        <div class="col">
+          <h3 class="tilte-footer blockquote-footer">contact</h3>
+          <!-- CONTACT CONTENT -->
+          <h6><b>TEL:</b> <span class="sub-content">000-000-000</span></h6>
+          <p><b>Address:</b> <span class="sub-content">bembem</span></p>
+          <!-- CONTACT ICON -->
+          <ul class="contact-item list-unstyled">
+            <li><a href=""><i class="bi bi-facebook"></i></a></li>
+            <li><a href=""><i class="bi bi-instagram item-item-contact"></i></a></li>
+            <li><a href=""><i class="bi bi-twitter item-item-contact"></i></a></li>
+            <li><a href=""><i class="bi bi-github item-item-contact"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="text-center ls-ft-text">Copyright © 2022 DDD hotel</div>
+  </footer>
+  <!-- SCRIPT -->
+  <script src="/assets/src/javascript/formBehave.js"></script>
+  <script src="/assets/src/javascript/bookbh.js"></script>
+  <!-- SCRIPT WITH BOOSTRAPS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+  <!-- Jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- 1. Owl -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="jquery-1.9.1.min.js"></script>
+  <script src="assets/owl-carousel/owl.carousel.js"></script>
+  <!-- Owl Carousel -->
+  <script>
+    $('.room-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: false,
+      dots: false,
+      items: 1,
+      // responsive: {
+      //   0: {
+      //     items: 1
+      //   },
+      //   600: {
+      //     items: 1
+      //   },
+      //   1000: {
+      //     items: 1
+      //   }
+      // },
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: true,
+    });
+  </script>
+</body>
+
+</html>
